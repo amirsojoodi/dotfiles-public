@@ -1,0 +1,17 @@
+[user]
+    name = username
+    email = email
+[colur]
+    ui = true
+[alias]
+    st = status
+    co = checkout
+    br = branch
+    cm = commit
+    logs = log --graph --decorate --pretty=oneline --abbrev-commit --all
+    mylog = log --pretty=format:'%h %s [%an]' --graph
+[push]
+    default = current
+
+[core]
+	editor = vim
