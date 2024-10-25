@@ -157,9 +157,6 @@ alias tgraham='tmux attach -t graham || tmux new -s graham "ssh graham"'
 # List and Kill all 2FA ssh connections
 alias ls2fa="ps aux | grep ssh | grep mux"
 alias kill2fa="kill -9 $(ps aux | grep ssh | grep mux | awk '{print $2}' | xargs)"
-# List all tmux sessions and windows at login
-echo "Available tmux sessions:"
-tmux ls
 
 ###############################################################################
 ############################ Alias definitions ################################
@@ -252,3 +249,13 @@ export PATH="$HOME/gems/bin:$PATH"
 
 ## Chrome with WebGPU
 alias chrome="DISPLAY=:1 google-chrome-unstable --enable-unsafe-webgpu --enable-features=Vulkan --disable-dawn-features=disallow_unsafe_apis &"
+
+###############################################################################
+########################## Things to show at login ############################
+# neofetch
+fastfetch
+
+echo "Available tmux sessions:" | lolcat
+#figlet tmux sessions:
+echo "========================" | lolcat
+tmux ls | lolcat
